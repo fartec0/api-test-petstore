@@ -1,9 +1,10 @@
+version: 2.1
 orbs:
   newman: postman/newman@0.0.2
 jobs:
-  build:
+  newman-collection-run:
     executor: newman/postman-newman-docker
     steps:
       - checkout
       - newman/newman-run:
-          collection: ./tests/TestingFlowSwaggerPetStore.postman_collection.json
+          collection: ./tests/TestingFlowSwaggerPetStore.postman_collection
