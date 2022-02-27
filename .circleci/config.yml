@@ -1,16 +1,14 @@
 version: 2.1
 orbs:
-  newman-orb: charge-tech/newman-orb@1.0.0
+  newman: postman/newman@0.0.2
 jobs:
-  newman-job:
-    docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
+  newman-collection-run:
+    executor: newman/postman-newman-docker
     steps:
-      - newman-orb/newman-run:
+      - checkout
+      - newman/newman-run:
           collection: ./tests/TestingFlowSwaggerPetStore.postman_collection.json 
-
 workflows:
   postman-workflow:
     jobs:
-      - newman-job
+      - newman-collection-run
