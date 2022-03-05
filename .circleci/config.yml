@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - newman/newman-run:
-          collection: ./tests/TestingFlowSwaggerPetStore.postman_collection.json
+          collection: ./TestingFlowSwaggerPetStore.postman_collection.json
           environment: ./env/SwaggerPetStore.postman_environment.json
 workflows:
   postman-workflow:
