@@ -1,6 +1,10 @@
 # api-test-petstore
 This example project aims to provide test coverage for the [Swagger Pet Store API](https://petstore.swagger.io/), using Postman/Newman as a test automation framework and Continuous Integration.
 
+#Pre-requisites
+- Having a www.postman.com registered user account
+
+
 # Usage
 
 ## Command line
